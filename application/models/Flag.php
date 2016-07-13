@@ -1,11 +1,11 @@
 <?php
 /**
- * Model that manages the flags (controller names) for defining
- * the Flags in the application
- *
- * @package backoffice_models
- * @copyright company
- */
+* @file Flag.php
+* @synopsis  model example
+* @author Yee, <rlk002@gmail.com>
+* @version 1.0
+* @date 2016-07-13 18:57:18
+*/
 
 class Flag extends App_Model
 {
