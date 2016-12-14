@@ -10,16 +10,15 @@
 define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
 define('ROOT_PATH', realpath(dirname(__FILE__) . '/..'));
 
-$paths = array(
-    realpath(dirname(__FILE__) . '/../library'),
-    get_include_path(),
-);
+$paths = [
+	    realpath(dirname(__FILE__) . '/../library'),
+	    get_include_path(),
+	];
 
 set_include_path(implode(PATH_SEPARATOR, $paths));
 
-include('Base/functions.php');
+include('../vendor/autoload.php');
 
-include('Tracy/tracy.php');
 use Tracy\Debugger;
 Debugger::enable(Debugger::DEVELOPMENT);
 Debugger::$showBar = False;

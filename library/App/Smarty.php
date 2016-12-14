@@ -7,10 +7,7 @@
 * @date 2016-07-12 17:32:18
 */
 
-require_once("App/Smarty/libs/Autoloader.php");
-Smarty_Autoloader::register();
-
-class Ysmarty extends Smarty
+class Ysmarty extends \Smarty
 {
 	public function __construct()
 	{
