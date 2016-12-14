@@ -11,14 +11,14 @@ require_once 'App/Bootstrap/Abstract.php';
 
 class Bootstrap extends App_Bootstrap_Abstract
 {
-	protected $_first = array(
-		'Autoloader',
-		'Environment'
-	);
+	protected $_first = [
+			'Autoloader',
+			'Environment'
+		];
 
-	protected $_last  = array(
-		'AppPaths'
-	);
+	protected $_last  = [
+			'AppPaths'
+		];
 
 	protected function _initAutoloader()
 	{
@@ -32,14 +32,12 @@ class Bootstrap extends App_Bootstrap_Abstract
 	protected function _initEnvironment()
 	{
 		$file = APPLICATION_PATH . '/configs/environment.php';
-		if (!is_readable($file))
-		{
+		if (!is_readable($file)){
 			throw new Zend_Exception('Cannot find the environment.php file!');
 		}
 
 		require_once ($file);
-		if (!defined('APPLICATION_ENV'))
-		{
+		if (!defined('APPLICATION_ENV')){
 			throw new Zend_Exception('The APPLICATION_ENV constant is not defined in ' . $file);
 		}
 
@@ -51,11 +49,9 @@ class Bootstrap extends App_Bootstrap_Abstract
 	protected function _initAppVersion()
 	{
 		$configuration = App_DI_Container::get('ConfigObject');
-		if (isset($configuration->release->version))
-		{
+		if (isset($configuration->release->version)){
 			define('APP_VERSION', $configuration->release->version);
-		}else
-		{
+		}else{
 			define('APP_VERSION', 'unknown');
 		}
 		Zend_Registry::set('APP_VERSION', APP_VERSION);
@@ -63,10 +59,10 @@ class Bootstrap extends App_Bootstrap_Abstract
 
 	protected function _initAppPaths()
 	{   
-		$paths = array(
-			APPLICATION_PATH,
-			get_include_path() ,
-		);
+		$paths = [
+				APPLICATION_PATH,
+				get_include_path() ,
+			];
 		set_include_path(implode(PATH_SEPARATOR, $paths));
 	}  
 
