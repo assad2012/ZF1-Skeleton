@@ -485,16 +485,16 @@
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.4.7",
+            "version": "v2.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "e9e93b778a75760a939593384e326fb65f9a0da2"
+                "reference": "4538cbe7f11d03d78afd34a168ca1c966792a3d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/e9e93b778a75760a939593384e326fb65f9a0da2",
-                "reference": "e9e93b778a75760a939593384e326fb65f9a0da2",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/4538cbe7f11d03d78afd34a168ca1c966792a3d6",
+                "reference": "4538cbe7f11d03d78afd34a168ca1c966792a3d6",
                 "shasum": ""
             },
             "require": {
@@ -507,7 +507,7 @@
                 "nette/tester": "~2.0"
             },
             "suggest": {
-                "https://nette.org/donate": "\u001b[1;37;42m Please consider supporting Tracy via a donation \u001b[0m"
+                "https://nette.org/donate": "Please support Tracy via a donation"
             },
             "type": "library",
             "extra": {
@@ -548,7 +548,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2017-05-11T14:28:35+00:00"
+            "time": "2017-07-14T06:38:56+00:00"
         }
     ],
     "packages-dev": [],
