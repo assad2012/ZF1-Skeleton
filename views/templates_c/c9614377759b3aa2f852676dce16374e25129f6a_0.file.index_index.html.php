@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-07-20 02:16:49
+/* Smarty version 3.1.31, created on 2017-08-29 23:32:35
   from "/home/data/wwwroot/ZF1-Skeleton/views/templates/index_index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_596fa211651212_32175566',
+  'unifunc' => 'content_59a58913a89f71_46064901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_596fa211651212_32175566 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59a58913a89f71_46064901 (Smarty_Internal_Template $_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['hello']->value;
 }
 }
