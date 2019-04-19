@@ -41,9 +41,11 @@ composer require tracy/tracy
 
 Alternatively, you can download the whole package or [tracy.phar](https://github.com/nette/tester/releases) file.
 
-Tracy 2.5 requires PHP version 5.4.4 or newer (supports PHP up to 7.2) and is compatible with Chrome 49+, Firefox 45+, MS Edge 12+, Safari 10+ and iOS Safari 10.2+.
-
-Tracy 2.4 requires PHP version 5.4.4 or newer (supports PHP up to 7.2) and is compatible with Chrome 29+, Firefox 28+, IE 11+, MS Edge 12+, Safari 9+ and iOS Safari 9.2+.
+| Tracy | PHP | compatible with browsers
+|-----------|---------------|----------
+| Tracy 2.6 | PHP 7.1 – 7.3 | Chrome 49+, Firefox 45+, MS Edge 14+, Safari 10+ and iOS Safari 10.2+
+| Tracy 2.5 | PHP 5.4.4 – 7.3 | Chrome 49+, Firefox 45+, MS Edge 12+, Safari 10+ and iOS Safari 10.2+
+| Tracy 2.4 | PHP 5.4.4 – 7.2 | Chrome 29+, Firefox 28+, IE 11+ (except AJAX), MS Edge 12+, Safari 9+ and iOS Safari 9.2+
 
 
 Usage
@@ -120,7 +122,20 @@ Debugger::$strictMode = true;
 
 [![Notice rendered by Tracy](https://nette.github.io/tracy/images/tracy-notice.png)](https://nette.github.io/tracy/tracy-notice.html)
 
-If your site uses Content Security Policy, you'll need to add `'unsafe-inline'` to `style-src`, and `'self'` or `'nonce-<value>` to `script-src` for Tracy to work properly. Avoid adding `'unsafe-inline'` in production mode, if you can. Some 3rd plugins may require additional directives.
+
+Content Security Policy
+-----------------------
+
+If your site uses Content Security Policy, you'll need to add `'nonce-<value>'` to `script-src` and eventually the same nonce to `style-src` for Tracy to work properly. Some 3rd plugins may require additional directives.
+
+Configuration example for [Nette Framework](https://nette.org):
+
+```neon
+http:
+	csp:
+		script-src: nonce
+		style-src: nonce
+```
 
 
 Faster loading
